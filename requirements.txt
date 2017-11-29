@@ -1,0 +1,6 @@
+Flask>=0.12,<0.13
+flask-talisman
+flask-assetrev
+flask-cors
+flask-seasurf>=0.2
+blinker>=1.4
