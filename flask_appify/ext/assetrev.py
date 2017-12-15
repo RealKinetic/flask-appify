@@ -6,9 +6,7 @@ __all__ = [
 
 
 def init_app(app):
-    app.config.setdefault('ASSETREV_MANIFEST_FILE', 'asset-manifest.json')
-    app.config.setdefault('ASSETREV_BASE_URL', None)
-    app.config.setdefault('ASSETREV_BASE_PATH', None)
-    app.config.setdefault('ASSETREV_RELOAD', app.debug)
+    asset_file = app.config.get('ASSETREV_MANIFEST_FILE', None)
 
-    flask_assetrev.AssetRev(app)
+    if asset_file:
+        flask_assetrev.AssetRev(app)

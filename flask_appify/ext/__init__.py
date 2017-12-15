@@ -14,7 +14,7 @@ modules = [
 
 
 def init_ext(app, ext_name):
-    ext = import_string(ext_name)
+    ext = import_string('flask_appify.ext.' + ext_name)
 
     ext.init_app(app)
 
